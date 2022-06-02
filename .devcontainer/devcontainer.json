@@ -1,0 +1,28 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.194.0/containers/docker-existing-dockerfile
+{
+	"name": "OhMyEnv",
+	"context": "..",
+	"dockerFile": "./Dockerfile",
+	"settings": {},
+	"extensions": [
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode"
+	],
+	"runArgs": [
+	 
+		"--dns=114.114.114.114",
+		"--privileged"
+	],
+	"mounts": [
+	 
+		"source=repos,target=/root/repos,type=volume"
+	 
+	],
+	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "root"
+	// "overrideCommand": false,
+	// "forwardPorts": [],
+	// "postCreateCommand": "apt-get update && apt-get install -y curl",
+	// "postStartCommand": "rm /var/run/docker.pid; /usr/sbin/dockerd & /usr/sbin/sshd -D"
+}
